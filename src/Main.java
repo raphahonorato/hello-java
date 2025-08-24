@@ -1,27 +1,27 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        var value1 = 4;
-        var binary1 = Integer.toBinaryString(value1);
-        System.out.printf("primeiro numero %s (representação binaria) %s \n", value1, binary1);
 
-        var value2 = 5;
-        var binary2 = Integer.toBinaryString(value2);
-        System.out.printf("segundo numero %s (representação binaria) %s\n",value2,binary2);
+        var scanner = new Scanner(System.in);
 
-        var result = value1 & value2;
-        var binaryResult = Integer.toBinaryString(result);
-        System.out.printf("%s | %s = %s  (representação binaria %s)\n", value1, value2, result, binaryResult);
+        System.out.println("Qual seu nome?");
+        var name = scanner.next();
+
+        System.out.println("Quantos anos vc tem?");
+        var age = scanner.nextInt();
+
+        System.out.println("vc é emancipado?");
+        var isEmancipated = scanner.nextBoolean();
+
+        if (age >= 18){
+            System.out.printf("olá %s vc tem %s, vc pode dirigir :D", name, age);
+        } else if (isEmancipated && age < 18 && age > 15) {
+            System.out.printf("olá %s vc tem %s, vc pode dirigir pq é emancipado :D", name, age);
+        } else{
+            System.out.printf("%s com %s, vc não pode dirigir :(", name, age);
+        }
+
+
     }
 }
-
-/*
-
-0 = true
-1 = false
-
- |   sempre considera o true
-
-
-
-
-*/
