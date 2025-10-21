@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main (String[] args){
 
+//  capturar o nome de duas pessoas, as suas idades e calcular a diferença de idade entre elas
     var scanner = new Scanner(System.in);
 
         System.out.println("Digite um nome: ");
@@ -35,7 +36,7 @@ public class Main {
 //      ====================================================
 
 
-//    calculo area de um retangulo
+//    calculo area de um retângulo
 //
 //    var scanner = new Scanner(System.in);
 //
