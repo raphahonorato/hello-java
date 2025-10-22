@@ -14,7 +14,10 @@ public class Main {
             var option = scanner.nextInt();
 
             var message = switch (option) {
-                case 1, 7 -> "Fim de semana !!";
+                case 1, 7 -> {
+                    String day = option == 1 ? "Domingo" : "Sábado";
+                    yield  String.format("Hoje é %s", day);
+                }
                 case 2 -> "Segunda";
                 case 3 -> "Terça";
                 case 4 -> "Quarta";
