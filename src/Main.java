@@ -5,16 +5,33 @@ public class Main {
 
         var scanner = new Scanner(System.in);
 
-        System.out.println("informe um numero de 1 a 10: ");
-        int number = scanner.nextInt();
 
+//      estrutura de controle switch
+        System.out.println("informe um numero de 1 a 7: ");
 
+        if (scanner.hasNextInt()) {
 
+            var option = scanner.nextInt();
 
+            switch (option) {
+                case 1, 7 -> System.out.println("Fim de semana !!");
+                case 2 -> System.out.println("Segunda");
+                case 3 -> System.out.println("Terça");
+                case 4 -> System.out.println("Quarta");
+                case 5 -> System.out.println("Quinta");
+                case 6 -> System.out.println("Sexta");
+//                case 7 -> System.out.println("Sábado");
+                default -> System.out.println("número inválido!");
+            }
+        } else {
+            System.out.println("Não é um numero!");
+        }
 
+//      ====================================================
 //
 //
 //        condicionais if else
+//
 //        var scanner = new Scanner(System.in);
 //
 //        System.out.println("informe seu nome: ");
